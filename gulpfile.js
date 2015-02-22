@@ -28,7 +28,7 @@ gulp.task('bower', ['clean'], function() {
 });
 
 gulp.task('scripts', ['clean'], function() {
-	return gulp.src('app/scripts/*.js')
+	return gulp.src('app/scripts/**/*.js')
 		.pipe(gulpif(args.production, concat('scripts.js')))
 		.pipe(gulpif(args.production, uglify()))
 		.pipe(gulpif(args.production, rename({ extname: '.min.js' })))
