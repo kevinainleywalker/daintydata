@@ -36,10 +36,15 @@ gulp.task('scripts', ['clean'], function() {
 });
 
 gulp.task('css', ['clean'], function () {
-	return gulp.src('app/less/main.less')
+	return gulp.src('app/less/main-app.less')
 		.pipe(less({
 			paths: [ path.join(__dirname, 'less', 'includes') ]
 		}))
+		.pipe(gulp.dest(output + 'css'));
+});
+
+gulp.task('vendor-css', ['clean'], function () {
+	return gulp.src('app/bower_components/html5-boilerplate/css/*.css')
 		.pipe(gulp.dest(output + 'css'));
 });
 
@@ -74,6 +79,6 @@ gulp.task('server', function() {
 	});
 });
 
-gulp.task('build', ['clean', 'scripts', 'bower', 'css', 'index', 'partials']);
+gulp.task('build', ['clean', 'scripts', 'bower', 'css', 'vendor-css', 'index', 'partials']);
 
 gulp.task('default', ['build', 'server']);
