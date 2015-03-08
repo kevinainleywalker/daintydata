@@ -1,10 +1,7 @@
 'use strict';
 
-angular.module('TextAdventure', [
+angular.module('MyApp', [
 	'ngRoute',
-	'myApp.filters',
-	'myApp.services',
-	'myApp.directives',
 	'Home'
 ]).
 config(['$routeProvider', function($routeProvider) {

@@ -1,1 +1,1 @@
-# text-adventure
+# my app seed
