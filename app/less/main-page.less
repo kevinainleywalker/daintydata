@@ -14,6 +14,35 @@
       color: #FFFFFF;
     }
   }
+
+  .example-data {
+    width: 33%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    display: inline-block;
+    height: 200px;
+
+    &.bar {
+      background-image: data-uri('../images/bar.png');
+    }
+
+    &.bar-3 {
+      background-image: data-uri('../images/bar-3.png');
+    }
+
+    &.doughnut {
+      background-image: data-uri('../images/doughnut.png');
+    }
+
+    &.hierarchy {
+      background-image: data-uri('../images/hierarchy.png');
+    }
+
+    &.infog {
+      background-image: data-uri('../images/infog.png');
+    }
+  }
 }
 
 .full-page-graph {
