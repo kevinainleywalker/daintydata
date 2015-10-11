@@ -1,25 +1,25 @@
-<div class="title-bar">
+<div class="title-bar" ng-controller="NavigationController">
     <div class="logo-container">
-        <div class="com-logo">&nbsp;</div>
+        <div class="com-logo" ng-click="navigate('home')">&nbsp;</div>
     </div>
     <ul class="menu-container">
-        <li class="menu-item menu-icon circle-icon">
+        <li class="menu-item menu-icon circle-icon" ng-click="navigate('what')">
             <p class="menu-text">What we</p>
             <p class="menu-text">do</p>
         </li>
-        <li class="menu-item menu-icon square-icon">
+        <li class="menu-item menu-icon square-icon" ng-click="navigate('why')">
             <p class="menu-text">Why we</p>
             <p class="menu-text">do it</p>
         </li>
-        <li class="menu-item menu-icon triangle-icon">
+        <li class="menu-item menu-icon triangle-icon" ng-click="navigate('how')">
             <p class="menu-text">How</p>
             <p class="menu-text">we do</p>
             <p class="menu-text">it</p>
         </li>
-        <li class="menu-item menu-icon diamond-icon">
+        <li class="menu-item menu-icon diamond-icon" ng-click="navigate('gallery')">
             <p class="menu-text">Gallery</p>
         </li>
-        <li class="menu-item menu-icon cross-icon">
+        <li class="menu-item menu-icon cross-icon" ng-click="navigate('links')">
             <p class="menu-text">Useful</p>
             <p class="menu-text">links</p>
         </li>
